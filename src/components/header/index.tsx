@@ -9,12 +9,12 @@ import {
     SearchButton,
     HeaderButtons
 } from "./styles";
-import HamburguerIcon from '../../assets/hamburger.png';
+import HamburguerIcon from '../../assets/icons/hamburger.png';
 import Logo from '../../assets/YouTube-Logo.png';
-import Lupa from '../../assets/search.png';
-import MicIcon from '../../assets/mic.png';
-import Bell from '../../assets/sino.png';
-import VideoIcon from '../../assets/video.png';
+import Lupa from '../../assets/icons/search.png';
+import MicIcon from '../../assets/icons/mic.png';
+import Bell from '../../assets/icons/sino.png';
+import VideoIcon from '../../assets/icons/video.png';
 
 
 interface IProps {
