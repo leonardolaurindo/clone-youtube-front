@@ -5,6 +5,9 @@ import {
 } from "./styles";
 import Bell from '../../assets/icons/sino.png';
 import HomeIcon from '../../assets/icons/homepage.png';
+import ShortsLogo from '../../assets/icons/shorts.png';
+import SubscribeIcon from '../../assets/icons/subscribe.png'
+import LibraryIcon from '../../assets/icons/history.png'
 
 const items = [
     { icon: HomeIcon, description: 'Início', link: '/' },
