@@ -15,6 +15,10 @@ import Lupa from '../../assets/icons/search.png';
 import MicIcon from '../../assets/icons/mic.png';
 import Bell from '../../assets/icons/sino.png';
 import VideoIcon from '../../assets/icons/video.png';
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../context/userContext";
+
 
 
 interface IProps {
@@ -23,6 +27,10 @@ interface IProps {
 }
 
 function Header({ openMenu, setOpenMenu }: IProps) {
+    const { login, logOut } = useContext(UserContext);
+
+    const navigate = useNavigate();
+
     return (
         <Container>
             <LogoContainer>
@@ -53,9 +61,16 @@ function Header({ openMenu, setOpenMenu }: IProps) {
                 <ButtonContainer margin='0 0 0 10px'>
                     <ButtonIcon alt="Notifications Icon" src={Bell} />
                 </ButtonContainer>
-                <ButtonContainer margin='0 0 0 10px'>
-                    P
-                </ButtonContainer>
+                {login ?
+                    <>
+                        <ButtonContainer margin='0 0 0 10px' >
+                            P
+                        </ButtonContainer>
+                        <span onClick={() => logOut()}>Sair</span>
+                    </>
+                    :
+                    <button onClick={() => navigate('/login')}>Login</button>
+                }
             </HeaderButtons>
         </Container>
     )
